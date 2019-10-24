@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button buttonGps;
     private Button buttonInternet;
+    private Button buttonCamera;
 
 
     @Override
@@ -31,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), Internet.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonCamera = findViewById(R.id.buttonCamera);
+        buttonCamera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Camera.class);
                 startActivity(intent);
             }
         });
