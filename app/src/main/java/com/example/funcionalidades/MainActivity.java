@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.funcionalidades.Room.RoomActivity;
+
 public class MainActivity extends Activity {
 
     private Button buttonGps;
     private Button buttonInternet;
     private Button buttonCamera;
+    private Button buttonPersistence;
 
 
     @Override
@@ -41,6 +44,15 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), Camera.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonPersistence = findViewById(R.id.buttonPersistencia);
+        buttonPersistence.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), RoomActivity.class);
                 startActivity(intent);
             }
         });
