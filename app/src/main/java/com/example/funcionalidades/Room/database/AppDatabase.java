@@ -14,7 +14,7 @@ import com.example.funcionalidades.Room.dao.WordDao;
 import com.example.funcionalidades.Room.pojo.User;
 import com.example.funcionalidades.Room.pojo.Word;
 
-@Database(entities = {User.class, Word.class}, version = 1)
+@Database(entities = {User.class, Word.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract UserDao userDao();
     public abstract WordDao wordDao();
