@@ -1,14 +1,15 @@
 package com.example.funcionalidades;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.funcionalidades.Room.RoomActivity;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     private Button buttonGps;
     private Button buttonInternet;

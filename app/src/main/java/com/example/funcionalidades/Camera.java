@@ -1,6 +1,5 @@
 package com.example.funcionalidades;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,13 +11,15 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
 
-public class Camera extends Activity {
+public class Camera extends AppCompatActivity {
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
     static final int REQUEST_TAKE_PHOTO = 1;
@@ -41,6 +42,8 @@ public class Camera extends Activity {
         });
 
         mimageView = findViewById(R.id.imgCamera);
+
+
 
     }
 

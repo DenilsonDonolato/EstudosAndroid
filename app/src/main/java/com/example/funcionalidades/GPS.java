@@ -1,7 +1,6 @@
 package com.example.funcionalidades;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -14,9 +13,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 
-public class GPS extends Activity {
+public class GPS extends AppCompatActivity {
 
     private Button buttonVoltar;
     private Button buttonAtualizar;
