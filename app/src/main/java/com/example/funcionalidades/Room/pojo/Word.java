@@ -9,8 +9,8 @@ import androidx.room.PrimaryKey;
 public class Word {
 
     @PrimaryKey
-    @NonNull
     @ColumnInfo(name = "word")
+    @NonNull
     private String mWord;
 
     public Word(String word) {this.mWord = word;}

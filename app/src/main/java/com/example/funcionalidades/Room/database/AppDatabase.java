@@ -8,15 +8,11 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
-
-import com.example.funcionalidades.Room.dao.UserDao;
 import com.example.funcionalidades.Room.dao.WordDao;
-import com.example.funcionalidades.Room.pojo.User;
 import com.example.funcionalidades.Room.pojo.Word;
 
-@Database(entities = {User.class, Word.class}, version = 1, exportSchema = false)
+@Database(entities = {Word.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
-    public abstract UserDao userDao();
     public abstract WordDao wordDao();
 
     private static volatile AppDatabase INSTANCE;
@@ -54,11 +50,11 @@ public abstract class AppDatabase extends RoomDatabase {
 
         @Override
         protected Void doInBackground(final Void... params) {
-            mDao.deleteAll();
-            Word word = new Word("Hello");
-            mDao.insert(word);
-            word = new Word("World");
-            mDao.insert(word);
+//            mDao.deleteAll();
+//            Word word = new Word("Hello");
+//            mDao.insert(word);
+//            word = new Word("World");
+//            mDao.insert(word);
             return null;
         }
     }
